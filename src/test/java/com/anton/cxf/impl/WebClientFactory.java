@@ -21,6 +21,7 @@ import java.util.stream.Stream;
 
 import javax.ws.rs.core.MediaType;
 
+import org.apache.cxf.feature.LoggingFeature;
 import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.jaxrs.client.ClientConfiguration;
 import org.apache.cxf.jaxrs.client.JAXRSClientFactoryBean;
@@ -78,6 +79,7 @@ public final class WebClientFactory
         {
             bean = new JAXRSClientFactoryBean();
             bean.setAddress(endpoint);
+            bean.getFeatures().add(new LoggingFeature());
         }
 
         /**
