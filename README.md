@@ -4,6 +4,8 @@ This repository contains tests to mess around with writing headers after the bod
 
 The main idea is that some API's require an `Authorization`-header that depends on the body. For example `Authorization: MyApp <base64(sha1(body + secret key))>`.
 
+There is a related [JIRA issue](https://issues.apache.org/jira/browse/CXF-7627) for this.
+
 
 ## Scenarios
 
